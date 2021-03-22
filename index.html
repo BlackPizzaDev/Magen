@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Magen Financial LLC</title>
+	<meta name="description" content="Magen Financial LLC - Built on culture, powered by people, empowered by technology.">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="img/svg/favicon.svg">
+	<!-- External Sources  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="animate__animated animate__fadeIn animate__delay-1s">
+	<video width="100%" playsinline autoplay="autoplay" muted>
+		<source src="img/video/animation.mp4" type="video/mp4">
+	</video>
+		<div class="Landscape-Message">
+			<p>Rotate your screen for a better experience</p>
+		</div>
+		<section class="Home">
+			<div class="Background"></div>
+			<img class="Circle" src="img/svg/circle.svg">
+			<section class="Wrapper">
+				<nav class="Nav">
+					<h1><img src="img/svg/logo.svg" alt="Welcome"></h1>
+					<a href="mailto:support@magenfinancial.com">
+						<div class="PointerNav">Contact Us</div>
+					</a>
+				</nav>
+				<div class="Main-Content">
+					<h2>A new Fintech<br> brokerage company</h2>
+					<p>Built on culture, powered by people,<br> empowered by technology.</p>
+					<div class="Border"></div>
+				</div>
+				<footer class="Footer">
+					<div class="Contact-Links">
+						<span>1540 Broadway, 40th Floor, New York, NY 10036 United States</span>
+						<a class="PointerLink CallMe" href="tel:1.914.416.5695">Phone: +1.914.416.5695</a>
+						<span href="#!">© 2021 Magen Financial LLC - All Rights Reserved.</span>
+						<a class="PointerLink ClickLinkedin" href="https://www.linkedin.com/company/magen-financial-llc/about/" target="_Blank"><img class="Linkedin-Picto" src="img/svg/ico-linkedin.svg"></a>
+					</div>
+					<div class="Footer-Logo">
+						<a class="ClickFinra" href="https://www.finra.org/#/" target="_Blank">
+							<img src="img/svg/finca-logo.svg" alt="Finca">
+						</a>
+						<a class="ClickSipc" href="https://www.sipc.org/" target="_Blank">
+							<img src="img/svg/sipc-logo.svg" alt="SIPC">
+						</a>
+					</div>
+				</footer>
+			</section>
+		</section>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Video Fade -->
+	<script>
+		$('video').on('ended',function(){ $(this).fadeOut(); });
+	</script>
+	<!-- Video Fade -->
+
+	<!-- Background -->
+	<script>
+		var lFollowX = 0,
+		lFollowY = 0,
+		x = 0,
+		y = 0,
+		friction = 1 / 30;
+
+		function moveBackground() {
+			x += (lFollowX - x) * friction;
+			y += (lFollowY - y) * friction;
+
+			translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+			$('.Background').css({
+				'-webit-transform': translate,
+				'-moz-transform': translate,
+				'transform': translate
+			});
+
+			window.requestAnimationFrame(moveBackground);
+		}
+
+		$(window).on('mousemove click', function(e) {
+
+		var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+		var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+		lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollowY
+		lFollowY = (10 * lMouseY) / 100;
+		});
+
+		moveBackground();
+	</script>
+	<!-- Background -->
