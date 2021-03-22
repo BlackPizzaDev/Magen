@@ -1,0 +1,406 @@
+body, html {
+	margin: 0px;
+	padding: 0px;
+	font-family: Jazmen;
+}
+
+/* Content Style*/
+.Home {
+	z-index: -1;
+	min-height: 100vh;
+}
+
+h1 > img {
+	width: 150px;
+}
+
+@media screen and (max-width: 915px) {
+	h1 > img {
+		width: 130px;
+	}	
+}
+
+.Background {
+	transform: scale(1.1);
+	background-image: url('../img/background/background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	image-rendering: -webkit-optimize-contrast;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.Wrapper {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	z-index: 1;
+	transition: padding ease-in 0.5s;
+	min-height: 100vh;
+}
+
+@media screen and (max-width: 915px) {
+	.Wrapper {
+		padding:25px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.Wrapper {
+		padding:20px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.Wrapper {
+		padding:20px 15px;
+	}
+}
+
+.Nav  {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 2;
+}
+
+/*Circle Style*/
+.Circle {
+	position: fixed;
+	right: -770px;
+	top: -490px;
+	height: 1400px;
+	opacity: 0.12;
+	transition: opacity 0.2s;
+}
+
+@media screen and (max-width: 1440px) {
+	.Circle {
+		width: 1300px;
+	}
+}
+
+@media screen and (max-width: 915px) {
+	.Circle {
+		opacity: 0;
+	}
+}
+
+@media screen and (max-width: 913px) {
+	.Circle {
+		display: none;
+	}
+}
+/*Circle Style*/
+
+.Main-Content {
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: fit-content;
+}
+
+.Border {
+	width: 130px;
+	height: 3px;
+	background-color: #FFFFFF;
+	position: absolute;
+	transform: rotate(297deg);
+	right: -70px;
+	bottom: 50px;
+}
+
+@media screen and (max-width: 915px) {
+	.Border {
+		display: none;
+	}
+}
+
+/* Footer Style*/
+footer {
+	display: flex;
+	justify-content: space-between;
+	z-index: 3;
+	align-items: center;
+}
+
+@media screen and (max-width: 1225px) {
+	footer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.Contact-Links {
+	width: 100%;
+	justify-content: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+	.Contact-Links {
+		justify-content: space-between;
+	}
+}
+
+.Contact-Links > a, span {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 14px;
+	width: fit-content;
+	background: linear-gradient(#FFF, #FFF) left bottom/0% 1px no-repeat;
+	transition:1s all;
+	margin: 0px 30px 0px 0px;
+	box-sizing: border-box;
+	padding-bottom: 5px;
+}
+
+@media screen and (max-width: 414px) {
+	.Contact-Links > a, span {
+		font-size: 12px;
+		padding-bottom: 3px;
+		margin: 0px 0px 10px 0px;
+	}
+}
+
+.Contact-Links > a:last-child {
+	margin-right: 0px;
+}
+
+.Contact-Links > a, .Footer-Logo > a  {
+	background: linear-gradient(#FFF, #FFF) left bottom/0% 1px no-repeat;
+	transition:1s all;
+}
+
+.Contact-Links > a:hover, .Footer-Logo >a:hover {
+	background: linear-gradient(#FFF, #FFF) left bottom/100% 1px no-repeat;
+	transition:1s all;
+}
+
+.Footer-Logo {
+	display: flex;
+	align-items: center;
+	width: fit-content;
+}
+
+@media screen and (max-width: 1225px) {
+	.Footer-Logo {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.Footer-Logo {
+		margin-top: 10px;
+	}
+}
+
+.Footer-Logo > a {
+	height: 20px;
+	padding-bottom: 5px;
+}
+
+.Footer-Logo > a:first-child {
+	margin-right: 20px;
+}
+
+.Footer-Logo > a:first-child > img:first-child {
+	height: 18px;
+}
+
+.Footer-Logo > a > img {
+	height: 20px;
+}
+/*Footer*/
+
+/* Landscape */
+.Landscape-Message {
+	display: none;
+	background-color: #00403D;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	box-sizing: border-box;
+}
+
+.Landscape-Message > p {
+	margin:0px;
+	padding: 0px;
+	font-size: 25px;
+
+}
+
+@media only screen and (max-height: 414px) { 
+  	.Home {
+  		display: none;
+  	}
+
+  	.Landscape-Message {
+  		display: flex;
+  	}
+}
+/* Landscape */
+
+@font-face {
+	font-family: Jazmen;
+	src: url(../fonts/jazmin-light.otf);
+	font-weight: 200;
+}
+
+h1,h2,p {
+	margin: 0px;
+	padding: 0px;
+	color: #F0ECEC;
+}
+
+a {
+	text-decoration: none;
+}
+
+video {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 99;
+	object-fit:contain;
+	background-color: #F5EEE8;
+	cursor: none;
+}
+
+/* H2 Responsive & Desk*/
+
+h2 {
+	font-size: 90px;
+	line-height: 95px;
+	font-weight: 200;
+}
+
+@media screen and (max-width: 1440px) {
+	h2 {
+		font-size: 80px;
+		line-height: 90px;
+	}
+}
+
+@media screen and (max-width: 915px) {
+	h2 {
+		font-size: 9.8vw;
+		line-height: 11vw;
+	}
+}
+
+
+@media screen and (max-width: 414px) {
+	h2 {
+		font-size: 13vw;
+		line-height: 14vw;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	h2 {
+		font-size: 10vw;
+		line-height: 11vw;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.Wrapper {
+		padding:20px 15px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	h1 > img {
+		width: 100px;
+	}
+}
+
+/* H2 Responsive & Desk*/
+
+/* P Responsive & Desk*/
+
+p {
+	font-size: 47px;
+	line-height: 55px;
+	margin-top: 25px;
+}
+
+@media screen and (max-width: 1440px) {
+	p {
+		font-size: 40px;
+		line-height: 50px;
+	}
+}
+
+@media screen and (max-width: 915px) {
+	p {
+		font-size: 5.2vw;
+		line-height: 7vw;
+	}
+}
+
+
+@media screen and (max-width: 414px) {
+	p {
+		font-size: 7vw;
+		line-height: 8vw;
+	}
+}
+
+/* P Responsive & Desk*/
+
+
+@media screen and (max-width: 915px) {
+	br {
+		display: none;
+	}
+}
+/* Basic Styles*/
+.PointerNav {
+	background-color: rgb(0, 64, 61, 1);
+	text-align: center;
+	-webkit-transition: background-color 0.3s ease-in;
+  	-moz-transition: background-color 0.3s ease-in;
+  	-o-transition: background-color 0.3s ease-in;
+  	transition: background-color 0.3s ease-in;
+	color: rgb(255, 255, 255, 1);
+	border-radius: 100%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	width: fit-content;
+	height: fit-content;
+	min-width: 80px;
+	min-height: 80px;
+	font-size: 14px;
+}
+
+.PointerNav:hover {
+	background-color: rgb(242, 237, 230, 1);
+	color: #00403D;
+}
+
+@media screen and (max-width: 320px) {
+	.PointerNav {
+		min-width: fit-content;
+		min-height: fit-content;
+		border-radius: 20px;
+		padding: 10px 20px;
+	}
+}
+/* Cursor Pointer*/
